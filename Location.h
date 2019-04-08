@@ -6,28 +6,24 @@
 #define LINKEDLISTVSBINARYTREE_LOCATION_H
 #include <string>
 
-class Location {
-    int position_id;
-    std::string state_code;
-    std::string county;
-    double latitude;
-    double longitude;
-    std::string line;
-    std::string construction;
-public:
-    Location(
-            int position_id,
-            std::string state_code,
-            std::string county,
-            double latitude,
-            double longitude,
-            std::string line,
-            std::string construction);
+struct Location {
+  Location(int position_id,
+		   std::string state_code,
+		   std::string county,
+		   double latitude,
+		   double longitude,
+		   std::string line,
+		   std::string construction);
 
-    // Declare los metodos que crea necesario
+  Location(const Location &data);
 
-    // Cree que sea necesario agregar destructor, justifique
-
+  int position_id;
+  double latitude;
+  double longitude;
+  std::string state_code;
+  std::string county;
+  std::string line;
+  std::string construction;
 };
 
 
